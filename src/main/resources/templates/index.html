@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head th:replace="partials/head.html :: head">
+        <meta charset="UTF-8">
+        <title>Welcome</title>
+    </head>
+    <body>
+    <div class="card">
+        <form th:action="@{/index}" th:method="Post">
+            <button type="submit" name="login">Login</button>
+        </form>
+    </div>
+    <div>
+        <form th:action="@{/index}" th:method="Post">
+            <button type="submit" name="register">Register</button>
+        </form>
+    </div>
+    </body>
+</html>

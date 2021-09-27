@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head th:replace="partials/head.html :: head">
+        <meta charset="UTF-8">
+        <title>Welcome</title>
+    </head>
+    <body>
+        <div class="card">
+            <form th:action="@{/create}" th:method="Post" th:object="user">
+                <div>
+                    <label for="user_name">User Name:</label>
+                    <input id="user_name" name="user_name" type="text">
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input id="email" type="text" name="email">
+                </div>
+                <div>
+                    <label for="password">Password:</label>
+                    <input id="password" type="password" name="password">
+                </div>
+                <div>
+                    <label for="passConfirm">Confirm Password:</label>
+                    <input id="passConfirm" type="password" name="passConfirm">
+                </div>
+                <button type="submit">Register</button>
+            </form>
+        </div>
+    </body>
+</html>
